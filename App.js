@@ -10,6 +10,7 @@ import Loading from './auth/Loading'
 import Login from './auth/Login'
 import Register from './auth/Register'
 import User from './Main/User'
+import Settings from './Main/Settings'
 import ChooseAge from './Main/ChooseAge'
 
 const stack = createStackNavigator()
@@ -66,6 +67,10 @@ const App = () => {
                     name="user"
                     component={User}
                     options={navigationOptions}
+                  />
+                  <stack.Screen
+                    name="settings"
+                    component={Settings}
                   />
                   < stack.Screen
                     name="chooseAge"
