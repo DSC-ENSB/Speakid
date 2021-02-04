@@ -20,6 +20,7 @@ const Login = ({ navigation }) => {
       .signInWithEmailAndPassword(email, pswd)
       .then((res) => {
         const uid = res.user.uid;
+        console.log(res)
         const usersRef = database().ref(`user/${uid}`);
         usersRef
           .once('value')
@@ -28,8 +29,9 @@ const Login = ({ navigation }) => {
               setError('User does not exist !');
               return;
             }
+            setIsProgressing(false)
             const user = snapShot.val();
-            navigation.push('user');
+            navigation.push('user', { user });
           })
           .catch((err) => {
             setIsProgressing(false)
@@ -40,12 +42,11 @@ const Login = ({ navigation }) => {
         setIsProgressing(false)
         setError(err.message);
       });
-    if (err != null) {
+    if (err !== null) {
       console.log(err.message)
     };
   };
   return (
-
     <View style={styles.footer}>
       <View style={styles.textbox}>
         <Text style={styles.heading}>Welcome Back !</Text>
