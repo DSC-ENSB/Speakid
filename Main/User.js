@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Dimensions, TouchableHighlight } from 'react-na
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Home from './Home'
 import Mother from './MotherDashBoard'
-import Colors from '../Colors'
+import Colors from '../style/Colors'
 
 const User = ({ navigation }) => {
 

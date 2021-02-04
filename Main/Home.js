@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, Dimensions, TouchableHighlight, Image } from 'react-native'
-import Colors from "../Colors";
+import Colors from "../style/Colors";
 
 const Home = ({ navigation }) => {
   return (
