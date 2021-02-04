@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Icone from 'react-native-vector-icons/Ionicons'
-import { View, Text, StyleSheet, Dimensions, Button } from 'react-native'
+import { View, Text, StyleSheet, Dimensions, TouchableHighlight } from 'react-native'
 import Colors from '../style/Colors'
 import auth from '@react-native-firebase/auth'
 
@@ -22,27 +22,26 @@ const Mother = ({ navigation }) => {
       <View style={styles.nav}>
         <Icone.Button
           name="settings"
-          onPress={() => console.log('Hello')}
+          onPress={() => navigation.navigate('settings')}
           size={22}
           backgroundColor="transparent"
           color={Colors.Black}
         >
         </Icone.Button>
+        <Text style={styles.brand}>Speakid</Text>
       </View>
-      <Button
-        onPress={() => auth().signOut()}
-        title='Log-out'
-      >
-      </Button>
       <View style={styles.statistcs}>
-        <Text>Statistcs ...</Text>
+        <Text>Statistics ...</Text>
       </View>
       <View style={styles.motherDutty}>
-        <View style={styles.motherDuttyStories}>
-          <Text>Stories</Text>
-        </View>
+        <TouchableHighlight
+          activeOpacity={.8}
+          onPress={console.log('Stories')}
+          style={styles.motherDuttyStories}>
+          <Text style={styles.text}>Stories</Text>
+        </TouchableHighlight>
         <View style={styles.motherDuttyOthers}>
-          <Text>Others</Text>
+          <Text style={styles.text}>Others</Text>
         </View>
       </View>
     </View>
@@ -57,7 +56,10 @@ const styles = StyleSheet.create({
     height: 73,
     position: 'relative',
     top: 0,
-    justifyContent: 'center',
+    paddingHorizontal: 10,
+    flexDirection: "row-reverse",
+    alignItems: 'center',
+    justifyContent: 'space-between',
     width: Dimensions.get('window').width,
     backgroundColor: Colors.White,
     elevation: 2,
@@ -82,7 +84,7 @@ const styles = StyleSheet.create({
     height: 150,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Colors.White,
+    backgroundColor: Colors.FirstList,
     borderRadius: 12,
     margin: 4,
     width: 150,
@@ -93,10 +95,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     margin: 4,
-    backgroundColor: Colors.White,
+    backgroundColor: Colors.SecondList,
     width: 150,
     borderRadius: 12,
     elevation: 4,
+  },
+  text: {
+    color: Colors.White,
+    fontWeight: "bold",
+    fontSize: 16,
+  },
+  brand: {
+    color: Colors.Primary,
+    fontWeight: "bold",
+    fontSize: 18,
   }
 
 })
