@@ -1,12 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet, Dimensions, TouchableHighlight } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import Home from './Home'
 import Mother from './MotherDashBoard'
 import Colors from '../style/Colors'
 
-const User = ({ navigation }) => {
-
+const User = ({ navigation, route }) => {
+  const props = route.params
   const Tab = createMaterialTopTabNavigator();
   return (
     <Tab.Navigator
@@ -27,9 +28,22 @@ const User = ({ navigation }) => {
         activeTintColor: Colors.Primary,
         inactiveTintColor: Colors.Grey,
       }}
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ color, size }) => {
+          let iconName;
+          size = 25;
+          if (route.name === 'BeBe') {
+            iconName = 'color-palette';
+          } else if (route.name === 'Momy') {
+            iconName = 'thermometer';
+          }
+          return <Ionicons name={iconName} size={size} color={color} />;
+        },
+      })}
+
     >
       <Tab.Screen name="BeBe" component={Home} />
-      <Tab.Screen name="Momy" component={Mother} />
+      <Tab.Screen name="Momy" component={Mother} props={props} />
     </Tab.Navigator>
 
   )
