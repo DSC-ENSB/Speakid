@@ -10,21 +10,26 @@ const Home = ({ navigation }) => {
         onPress={() => navigation.navigate('training')}
         style={[styles.Box]}>
         <>
-          <Image source={require('../assets/kid.png')} style={styles.Imagebackground} />
+          <Image
+            source={require('../assets/child.png')}
+            style={styles.Imagebackground} />
           <View style={styles.hiddenLayer}>
           </View>
-          <Text style={styles.title}>Training</Text>
+          <Text style={styles.title}>تدرب </Text>
         </>
       </TouchableHighlight>
+
       <TouchableHighlight
         activeOpacity={.8}
         onPress={() => navigation.navigate('listen')}
         style={[styles.Box]}>
         <>
-          <Image source={require('../assets/kid.png')} style={styles.Imagebackground} />
+          <Image
+            source={require('../assets/listen.png')}
+            style={styles.Imagebackground} />
           <View style={styles.hiddenLayer}>
           </View>
-          <Text style={styles.title}>Listen</Text>
+          <Text style={styles.title}>إستمع</Text>
         </>
       </TouchableHighlight>
       <TouchableHighlight
@@ -32,10 +37,12 @@ const Home = ({ navigation }) => {
         onPress={() => navigation.navigate('speek')}
         style={[styles.Box]}>
         <>
-          <Image source={require('../assets/kid.png')} style={styles.Imagebackground} />
+          <Image
+            source={require('../assets/speak.png')}
+            style={styles.Imagebackground} />
           <View style={styles.hiddenLayer}>
           </View>
-          <Text style={styles.title}>Speek</Text>
+          <Text style={styles.title}>تكلم</Text>
         </>
       </TouchableHighlight>
     </View>
@@ -57,7 +64,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 18,
+    fontSize: 25,
     paddingHorizontal: 10,
     paddingVertical: 5,
     borderRadius: 12,
@@ -71,7 +78,7 @@ const styles = StyleSheet.create({
   hiddenLayer: {
     height: 150,
     width: Dimensions.get('window').width > 350 ? 350 : 300,
-    backgroundColor: Colors.Grey,
+    backgroundColor: Colors.Secondary,
     borderRadius: 12,
     opacity: .7,
     position: 'absolute',
