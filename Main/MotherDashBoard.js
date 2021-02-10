@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Icone from 'react-native-vector-icons/Ionicons'
 import { View, Text, StyleSheet, Dimensions, TouchableHighlight } from 'react-native'
 import Colors from '../style/Colors'
-import auth from '@react-native-firebase/auth'
 
 const Mother = ({ navigation }) => {
   const [stories, setStories] = useState(null)
@@ -10,9 +9,6 @@ const Mother = ({ navigation }) => {
     // function to fetch stories from firebase 
     setStories(['One', 'Two', 'Three'])
     console.log(stories)
-  }
-  const goToStory = () => {
-    // function to redirect mother to specifque story
   }
   useEffect(() => {
     GetStories()
@@ -22,6 +18,7 @@ const Mother = ({ navigation }) => {
       <View style={styles.nav}>
         <Icone.Button
           name="settings"
+          underlayColor={Colors.Grey}
           onPress={() => navigation.navigate('settings')}
           size={22}
           backgroundColor="transparent"
@@ -36,7 +33,8 @@ const Mother = ({ navigation }) => {
       <View style={styles.motherDutty}>
         <TouchableHighlight
           activeOpacity={.8}
-          onPress={console.log('Stories')}
+          underlayColor={Colors.Grey}
+          onPress={() => navigation.navigate('stories')}
           style={styles.motherDuttyStories}>
           <Text style={styles.text}>Stories</Text>
         </TouchableHighlight>
