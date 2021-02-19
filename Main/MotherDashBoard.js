@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react'
 import Icone from 'react-native-vector-icons/Ionicons'
 import { View, Text, StyleSheet, Dimensions, TouchableHighlight } from 'react-native'
 import Colors from '../style/Colors'
+import { LineChart } from "react-native-chart-kit";
 
 const Mother = ({ navigation }) => {
   const [stories, setStories] = useState(null)
   const GetStories = () => {
-    // function to fetch stories from firebase 
+    // function to fetch stories from firebase
     setStories(['One', 'Two', 'Three'])
     console.log(stories)
   }
@@ -28,7 +29,49 @@ const Mother = ({ navigation }) => {
         <Text style={styles.brand}>Speakid</Text>
       </View>
       <View style={styles.statistcs}>
-        <Text>Statistics ...</Text>
+        <LineChart
+          data={{
+            labels: ["Sun", "Mon", "Tur", "Wen", "Thr", "fri", "Sat"],
+            datasets: [
+              {
+                data: [
+                  Math.random() * 10,
+                  Math.random() * 10,
+                  Math.random() * 10,
+                  Math.random() * 10,
+                  Math.random() * 10,
+                  Math.random() * 10,
+                  Math.random() * 10
+                ]
+              }
+            ]
+          }}
+          width={Dimensions.get("window").width - 60} // from react-native
+          height={180}
+          yAxisSuffix="hr"
+          yAxisInterval={1} // optional, defaults to 1
+          chartConfig={{
+            backgroundColor: "#fff",
+            backgroundGradientFrom: "#fff",
+            backgroundGradientTo: "#fff",
+            decimalPlaces: 2,
+            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            style: {
+              borderRadius: 16
+            },
+            propsForDots: {
+              r: "6",
+              strokeWidth: "2",
+              stroke: "#e26a00"
+            }
+          }}
+          bezier
+          style={{
+            marginVertical: 8,
+            borderRadius: 16
+          }}
+        />
       </View>
       <View style={styles.motherDutty}>
         <TouchableHighlight
@@ -38,9 +81,13 @@ const Mother = ({ navigation }) => {
           style={styles.motherDuttyStories}>
           <Text style={styles.text}>Stories</Text>
         </TouchableHighlight>
-        <View style={styles.motherDuttyOthers}>
-          <Text style={styles.text}>Others</Text>
-        </View>
+        <TouchableHighlight
+          onPress={() => navigation.navigate('tips')}
+          activeOpacity={.8}
+          underlayColor={Colors.Grey}
+          style={styles.motherDuttyOthers}>
+          <Text style={styles.text}>TIPS</Text>
+        </TouchableHighlight>
       </View>
     </View>
   )
