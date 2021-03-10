@@ -1,18 +1,28 @@
-import React, { useState } from 'react'
-import { View, Text, TouchableOpacity, StyleSheet, Dimensions, ScrollView } from 'react-native'
+import React, { useState, useEffect } from 'react'
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import Colors from "../style/Colors";
-
+import database from '@react-native-firebase/database';
+import auth from '@react-native-firebase/auth'
 
 const Question = (props) => {
+  const userID = auth().currentUser.uid
+  const dbRef = database().ref(`user/${userID}/answers`)
+
   const [isTrueEnabled, setIsTrueEnabled] = useState(false);
+  const [answer, setAnswer] = useState(null)
   const [isFalseEnabled, setIsFalseEnabled] = useState(false);
-  const toggleTrueSwitch = () => {
-    setIsTrueEnabled(!isTrueEnabled)
+
+  const toggleTrueSwitch = async () => {
+    await setAnswer({ [props.title]: 'Yes' })
+    setIsTrueEnabled(() => !isTrueEnabled)
     setIsFalseEnabled(false)
+    dbRef.push(answer)
   };
-  const toggleFalseSwitch = () => {
-    setIsFalseEnabled(!isFalseEnabled)
+  const toggleFalseSwitch = async () => {
+    await setAnswer({ [props.title]: 'No' })
+    setIsFalseEnabled(() => !isFalseEnabled)
     setIsTrueEnabled(false)
+    dbRef.push(answer)
   };
 
   return (
