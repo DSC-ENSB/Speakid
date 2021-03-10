@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableHighlight } from 'react-native'
 import Icone from "react-native-vector-icons/Ionicons";
 import auth from '@react-native-firebase/auth'
 
@@ -8,6 +8,12 @@ import Colors from '../style/Colors';
 const Settings = ({ navigation }) => {
   return (
     <View style={styles.wrapper}>
+      <TouchableHighlight
+        underlayColor={Colors.Grey}
+        style={styles.option}
+        onPress={() => navigation.navigate('DiagonsticForum')}>
+        <Text style={styles.optionTxt}>Change Your Questions</Text>
+      </TouchableHighlight>
       <View style={styles.signOutButton}>
         <Icone.Button
           name="person-remove"
@@ -37,6 +43,15 @@ const styles = StyleSheet.create({
     height: 75,
     width: 75,
     borderRadius: 50,
+  },
+  option: {
+    paddingVertical: 30,
+    paddingLeft: 15,
+    backgroundColor: '#ececec',
+  }, optionTxt: {
+    color: Colors.Black,
+    fontSize: 16,
+    fontWeight: "bold"
   }
 })
 export default Settings;
