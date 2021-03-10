@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Dimensions, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, Dimensions, ScrollView, TouchableHighlight, StatusBar } from 'react-native'
 import Colors from '../style/Colors'
 import Question from '../Components/Question'
 import Questions from '../Components/Questions'
@@ -10,9 +10,11 @@ const ChooseAge = ({ navigation }) => {
 
   return (
     <>
+      <StatusBar
+        backgroundColor={Colors.Secondary}
+      />
       <View style={styles.noticeBox}>
         <Text style={styles.title}>الأسئلة قد تكون  طويلة نوعا ما </Text>
-        <Text style={[styles.title, { fontSize: 16 }]}> من أجلهم نستحمل </Text>
       </View>
       <View style={styles.container}>
         <ScrollView>
@@ -21,7 +23,7 @@ const ChooseAge = ({ navigation }) => {
           <Question title="هل عانى أو يعاني أحد الأبوين من أحد اضطرابات اللغة ؟" />
           <Questions title="إذا كان الجواب بنعم فما هو نوع الاضطراب**  ؟" answers={[`الاضطرابات النطقية`, `تأخر الكلام`, `تأخر اللغة وتأخر النمو اللغوي`, `اضطراب الكلام كالتأتأة`]} />
           <Question title="هل تعرض أو يتعرض الطفل لأي نوع من العنف؟ " />
-          <Question title="هل يقوم الطفل بتصرفات عنيفة تجاه أقرانه/ اخوته؟" />
+          <Question title="هل يقوم الطفل بتصرفات عنيفة تجاه أقرانه اخوته؟" />
           <Question title="هل تلاحظون أي مؤشرات مرض التوحد في طفلكم؟" />
           <Text style={styles.Header}> قبل الولادة </Text>
           <Question title="هل عانت الأم من أمراض مزمنة؟" />
@@ -59,6 +61,12 @@ const ChooseAge = ({ navigation }) => {
           <Question title="هل يسرح طفلكم عادة؟" />
           <Question title=" هل يشاهد طفلكم التلفاز؟" />
           <Question title="هل يستخدم طفلكم الأجهزة الذكية؟ " />
+          <TouchableHighlight
+            onPress={Redirect}
+            style={styles.Donebtn}
+          >
+            <Text style={styles.Donetxt}>تم</Text>
+          </TouchableHighlight>
         </ScrollView>
       </View>
     </>
@@ -72,10 +80,12 @@ const styles = StyleSheet.create({
     alignItems: "flex-end",
   },
   noticeBox: {
-    height: 120,
+    height: 80,
+    borderBottomLeftRadius: 24,
+    borderBottomRightRadius: 24,
     alignSelf: 'center',
     width: Dimensions.get('window').width,
-    backgroundColor: Colors.Primary,
+    backgroundColor: Colors.Secondary,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -87,6 +97,18 @@ const styles = StyleSheet.create({
     color: Colors.Black,
     fontSize: 18,
     fontWeight: 'bold',
+  },
+  Donebtn: {
+    backgroundColor: Colors.SecondList,
+    paddingVertical: 20,
+    margin: 10,
+    marginLeft: 32,
+    borderRadius: 12,
+  }, Donetxt: {
+    textAlign: 'center',
+    color: Colors.White,
+    fontSize: 18,
+    fontWeight: "bold",
   }
 
 })
