@@ -34,7 +34,7 @@ const Home = ({ navigation }) => {
       </TouchableHighlight>
       <TouchableHighlight
         activeOpacity={.8}
-        onPress={() => navigation.navigate('speek')}
+        onPress={() => navigation.navigate('learn')}
         style={[styles.Box]}>
         <>
           <Image
@@ -42,7 +42,7 @@ const Home = ({ navigation }) => {
             style={styles.Imagebackground} />
           <View style={styles.hiddenLayer}>
           </View>
-          <Text style={styles.title}>تكلم</Text>
+          <Text style={styles.title}>تعلم</Text>
         </>
       </TouchableHighlight>
     </View>

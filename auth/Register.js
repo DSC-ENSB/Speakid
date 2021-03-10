@@ -36,7 +36,7 @@ const Register = ({ navigation }) => {
           usersRef
             .set(data)
             .then(() => {
-              navigation.navigate('chooseAge', { data })
+              navigation.navigate('DiagonsticForum')
             })
         })
         .catch((err) => {
@@ -63,7 +63,7 @@ const Register = ({ navigation }) => {
             placeholder="Child name"
             required
             style={styles.input}
-            placeholderTextColor={Colors.White}
+            placeholderTextColor="grey"
             onChangeText={(text) => setUserName(text)}
             value={userName}
           />
@@ -73,7 +73,7 @@ const Register = ({ navigation }) => {
             placeholder="e-mail"
             keyboardType="email-address"
             style={styles.input}
-            placeholderTextColor={Colors.White}
+            placeholderTextColor="grey"
             onChangeText={(text) => setEmail(text)}
             value={email}
           />
@@ -83,7 +83,7 @@ const Register = ({ navigation }) => {
               placeholder="password"
               secureTextEntry={isSecure}
               style={styles.input}
-              placeholderTextColor={Colors.White}
+              placeholderTextColor="grey"
               onChangeText={(text) => setPswd(text)}
               value={pswd}
             />
