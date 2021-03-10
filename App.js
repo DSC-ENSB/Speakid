@@ -13,6 +13,7 @@ import User from './Main/User'
 import Settings from './Main/Settings'
 import DiagonsticForum from './Main/DiagonsticForum'
 import Stories from './Main/Stories';
+import Learn from './Main/Learn';
 import Tips from './Main/Tips';
 
 const stack = createStackNavigator()
@@ -63,16 +64,17 @@ const App = () => {
           :
           <>
             {
-              user == null ?
+              user !== null ?
                 <>
-                  <stack.Screen
-                    name="DiagonsticForum"
-                    component={DiagonsticForum}
-                    options={navigationOptions}
-                  />
+
                   <stack.Screen
                     name="user"
                     component={User}
+                    options={navigationOptions}
+                  />
+                  <stack.Screen
+                    name="DiagonsticForum"
+                    component={DiagonsticForum}
                     options={navigationOptions}
                   />
                   <stack.Screen
@@ -86,6 +88,10 @@ const App = () => {
                   <stack.Screen
                     name="stories"
                     component={Stories}
+                  />
+                  <stack.Screen
+                    name="learn"
+                    component={Learn}
                   />
 
                 </>
