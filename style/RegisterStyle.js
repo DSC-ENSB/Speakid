@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width - 60,
     textAlign: 'center',
     padding: 15,
-    backgroundColor: Colors.Primary,
+    backgroundColor: Colors.FirstList,
     borderRadius: 8,
     fontFamily: 'Montserrat Regular',
     fontWeight: 'bold',
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   link: {
     marginVertical: 10,
     fontFamily: 'Montserrat Regular',
-    color: Colors.Primary,
+    color: Colors.FirstList,
   },
   btnHandler: {
     position: 'absolute',
