@@ -4,7 +4,7 @@ import Icone from 'react-native-vector-icons/Ionicons'
 import SoundPlayer from 'react-native-sound-player'
 import Colors from '../style/Colors'
 
-const Learn = () => {
+const Learn = ({ navigation }) => {
   const playSound = () => {
     try {
 
@@ -45,13 +45,13 @@ const Learn = () => {
             onPress={() => SelectOption('01')}
             underlayColor='grey'
             style={styles.option}>
-            <Image source={require('../assets/speak.png')} style={styles.image} />
+            <Image source={require('../assets/kiwi.png')} style={styles.image} />
           </TouchableHighlight>
           <TouchableHighlight
             onPress={() => SelectOption('02')}
             underlayColor='grey'
             style={styles.option}>
-            <Image source={require('../assets/speak.png')} style={styles.image} />
+            <Image source={require('../assets/orange.png')} style={styles.image} />
           </TouchableHighlight>
         </View>
         <View style={styles.row}>
@@ -59,19 +59,21 @@ const Learn = () => {
             onPress={() => SelectOption('03')}
             underlayColor='grey'
             style={styles.option}>
-            <Image source={require('../assets/speak.png')} style={styles.image} />
+            <Image source={require('../assets/banana.png')} style={styles.image} />
           </TouchableHighlight>
           <TouchableHighlight
             onPress={() => SelectOption('04')}
             underlayColor='grey'
             style={styles.option} >
-            <Image source={require('../assets/speak.png')} style={styles.image} />
+            <Image source={require('../assets/apple.png')} style={styles.image} />
           </TouchableHighlight>
         </View>
       </View>
       <View style={answer ? styles.resulte : styles.hidden}>
         <Text style={styles.ResTxt}>عمل جيد</Text>
-        <TouchableHighlight style={styles.next}>
+        <TouchableHighlight
+          onPress={() => navigation.navigate('learnTwo')}
+          style={styles.next}>
           <Text>تم</Text>
         </TouchableHighlight>
       </View>
