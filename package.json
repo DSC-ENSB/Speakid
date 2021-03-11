@@ -28,7 +28,8 @@
     "react-native-svg": "^12.1.0",
     "react-native-tab-view": "^2.15.2",
     "react-native-vector-icons": "^8.0.0",
-    "react-router-native": "^5.2.0"
+    "react-router-native": "^5.2.0",
+    "rn-swipeable-panel": "^1.2.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
