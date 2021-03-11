@@ -18,12 +18,12 @@ const Register = ({ navigation }) => {
   const [err, setError] = useState(null);
 
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (MotherName === '') { setError('User name is required') }
     else if (pswd.length < 8) { setError('password must contain 8 letters or more ') }
     else {
       setIsProgressing(true)
-      auth()
+      await auth()
         .createUserWithEmailAndPassword(email, pswd)
         .then((response) => {
           const uid = response.user.uid;

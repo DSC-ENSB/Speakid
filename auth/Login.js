@@ -14,9 +14,9 @@ const Login = ({ navigation }) => {
   const [isProgressing, setIsProgressing] = useState(false);
   const [err, setError] = useState(null);
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setIsProgressing(true)
-    auth()
+    await auth()
       .signInWithEmailAndPassword(email, pswd)
       .then((res) => {
         const uid = res.user.uid;
