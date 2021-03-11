@@ -14,6 +14,8 @@ import Settings from './Main/Settings'
 import DiagonsticForum from './Main/DiagonsticForum'
 import Stories from './Main/Stories';
 import Learn from './Main/Learn';
+import LearnTwo from './Main/LearnTwo';
+import LearnThree from './Main/Learn';
 import Tips from './Main/Tips';
 
 const stack = createStackNavigator()
@@ -92,6 +94,14 @@ const App = () => {
                   <stack.Screen
                     name="learn"
                     component={Learn}
+                  />
+                  <stack.Screen
+                    name="learnTwo"
+                    component={LearnTwo}
+                  />
+                  <stack.Screen
+                    name="learnThree"
+                    component={LearnThree}
                   />
 
                 </>
