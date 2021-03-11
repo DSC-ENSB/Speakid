@@ -1,10 +1,13 @@
 import React from 'react'
-import { View, Text, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native'
 import Colors from '../style/Colors'
 
 const Tips = () => {
   return (
     <View style={styles.wrapper}>
+      <View style={styles.noticeBox}>
+        <Text style={styles.title}>نصائح لكيفية التعامل مع طفلك </Text>
+      </View>
       <ScrollView>
         <Text style={styles.tip}> إجراء محادثاتٍ مع الطفل</Text>
         <Text style={styles.tip}> الإشارة إلى الألوان والأشكال</Text>
@@ -23,16 +26,31 @@ const Tips = () => {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    padding: 20,
+    alignItems: 'center',
+  },
+  noticeBox: {
+    height: 80,
+    borderBottomLeftRadius: 24,
+    borderBottomRightRadius: 24,
+    alignSelf: 'center',
+    width: Dimensions.get('window').width,
+    backgroundColor: Colors.Secondary,
+    alignItems: 'center',
+    marginBottom: 10,
+    justifyContent: 'center',
+  },
+  title: {
+    color: Colors.White,
+    fontSize: 18,
   },
   tip: {
     fontSize: 22,
     elevation: 2,
     backgroundColor: Colors.White,
     padding: 10,
-    borderRightColor: Colors.FirstList,
-    borderRightWidth: 4,
-    borderRadius: 8,
+    width: Dimensions.get('window').width - 60,
+    borderBottomColor: Colors.FirstList,
+    borderBottomWidth: 4,
     lineHeight: 50,
     color: Colors.Black,
     marginVertical: 5,
