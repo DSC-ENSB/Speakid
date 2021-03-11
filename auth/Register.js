@@ -9,7 +9,8 @@ import Colors from '../style/Colors'
 
 
 const Register = ({ navigation }) => {
-  const [userName, setUserName] = useState('');
+  const [MotherName, setMotherName] = useState('');
+  const [KidName, setKidName] = useState('');
   const [email, setEmail] = useState('');
   const [pswd, setPswd] = useState('');
   const [isSecure, setIsSecure] = useState(true)
@@ -18,7 +19,7 @@ const Register = ({ navigation }) => {
 
 
   const handleSubmit = () => {
-    if (userName === '') { setError('User name is required') }
+    if (MotherName === '') { setError('User name is required') }
     else if (pswd.length < 8) { setError('password must contain 8 letters or more ') }
     else {
       setIsProgressing(true)
@@ -29,7 +30,8 @@ const Register = ({ navigation }) => {
           const data = {
             id: uid,
             email,
-            displayName: userName,
+            KidName,
+            displayName: MotherName,
             password: pswd,
           };
           const usersRef = database().ref(`user/${uid}`);
@@ -59,13 +61,22 @@ const Register = ({ navigation }) => {
         </View>
         <View>
           <TextInput
-            name="Child Name"
+            name="Mother name"
+            placeholder="Mother name"
+            required
+            style={styles.input}
+            placeholderTextColor="grey"
+            onChangeText={(text) => setMotherName(text)}
+            value={MotherName}
+          />
+          <TextInput
+            name="Child name"
             placeholder="Child name"
             required
             style={styles.input}
             placeholderTextColor="grey"
-            onChangeText={(text) => setUserName(text)}
-            value={userName}
+            onChangeText={(text) => setKidName(text)}
+            value={KidName}
           />
           <TextInput
             name="email"
