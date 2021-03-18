@@ -32,9 +32,9 @@ const User = ({ navigation, route }) => {
         tabBarIcon: ({ color, size }) => {
           let iconName;
           size = 25;
-          if (route.name === 'BeBe') {
+          if (route.name === 'Kid') {
             iconName = 'color-palette';
-          } else if (route.name === 'Momy') {
+          } else if (route.name === 'mother') {
             iconName = 'thermometer';
           }
           return <Ionicons name={iconName} size={size} color={color} />;
@@ -42,8 +42,8 @@ const User = ({ navigation, route }) => {
       })}
 
     >
-      <Tab.Screen name="BeBe" component={Home} />
-      <Tab.Screen name="Momy" component={Mother} props={props} />
+      <Tab.Screen name="Kid" component={Home} />
+      <Tab.Screen name="mother" component={Mother} props={props} />
     </Tab.Navigator>
 
   )
