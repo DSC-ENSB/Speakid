@@ -36,7 +36,7 @@ const Learn = ({ navigation }) => {
           <Icone
             color={Colors.FirstList}
             size={30}
-            name="megaphone-outline" />
+            name="volume-high" />
         </TouchableHighlight>
       </View>
       <View style={styles.OptionsBox}>
@@ -111,6 +111,8 @@ const styles = StyleSheet.create({
     width: 180,
     backgroundColor: 'lightgrey',
     borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   row: {
     display: "flex",
@@ -120,8 +122,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
   image: {
-    height: 180,
-    width: 180,
+    height: 150,
+    width: 150,
     resizeMode: 'contain'
   },
   resulte: {

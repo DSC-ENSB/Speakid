@@ -4,7 +4,7 @@ import Icone from 'react-native-vector-icons/Ionicons'
 import SoundPlayer from 'react-native-sound-player'
 import Colors from '../style/Colors'
 
-const Learn = ({ navigation }) => {
+const LearnThree = ({ navigation }) => {
   const playSound = () => {
     try {
 
@@ -36,7 +36,7 @@ const Learn = ({ navigation }) => {
           <Icone
             color={Colors.FirstList}
             size={30}
-            name="megaphone-outline" />
+            name="volume-high" />
         </TouchableHighlight>
       </View>
       <View style={styles.OptionsBox}>
@@ -70,7 +70,7 @@ const Learn = ({ navigation }) => {
         </View>
       </View>
       <View style={answer ? styles.resulte : styles.hidden}>
-        <Text style={styles.ResTxt}>عمل جيد</Text>
+        <Text style={styles.ResTxt}> عمل جيد لقد أتممت المرحلة</Text>
         <TouchableHighlight
           onPress={() => navigation.navigate('user')}
           style={styles.next}>
@@ -156,4 +156,4 @@ const styles = StyleSheet.create({
     display: 'none',
   }
 })
-export default Learn;
+export default LearnThree;
