@@ -7,6 +7,9 @@ ___
 ##### Install npm dependencies
 `npm install` 
 ##### Run 
-`react-native run-android && react-native start`
+
+`react-native run-android`
+
+`react-native start`
 
 > **NB :** react-native should be [configured](http://reactnative.dev/docs/environment-setup) in your machine 

@@ -37,10 +37,6 @@ The features we can add to this application could be :
 - VR/AR games.
 - The availability for teenagers and young people.  
 
-How to install 
-----------------------
-[install](https://github.com/DSC-ENSB/Speakid/blob/main/install.md)
-
 License
 --------
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/#)
