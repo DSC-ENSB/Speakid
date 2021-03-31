@@ -31,7 +31,7 @@ To run the code, click [here](https://github.com/DSC-ENSB/Speakid/blob/main/inst
 Possible next features
 ----------------------
 The features we can add to this application could be :  
-- Different languages so it could become more universal.  
+- Different languages so it could become more universal.
 - Add facial detection.  
 - The ability to add familiar voices.  
 - VR/AR games.
