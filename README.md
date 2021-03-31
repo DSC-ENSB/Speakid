@@ -1,6 +1,6 @@
 Main objectives
 ---------------
-SpeaKid is an application developed for kids aged between 3 and 17 years old suffering from speaking disorder and articulation troubles. It aims to :  
+SpeaKid is a cross platform developed for kids aged between 3 and 17 years old suffering from speaking disorder and articulation troubles. It aims to :  
 
 - Acquire better pronunciation of words.
 - Improve children’s capacity of assimilation.
@@ -27,10 +27,14 @@ SpeaKid is a cross platform and it required the following technologies :
 Possible next features
 ----------------------
 The features we can add to this application could be :  
-- Different languages so it could become more universal.  
+- Different languages so it could become more universal.
 - Add facial detection.  
 - The ability to add familiar voices.
 - The availability for teenagers and young people.  
+
+How to install 
+----------------------
+[install](https://github.com/DSC-ENSB/Speakid/blob/main/install.md)
 
 License
 --------
