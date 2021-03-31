@@ -1,6 +1,6 @@
 Main objectives
 ---------------
-SpeaKid is an application developed for kids aged between 3 and 17 years old suffering from speaking disorder and articulation troubles. It aims to :  
+SpeaKid is a cross platform developed for kids aged between 3 and 17 years old suffering from speaking disorder and articulation troubles. It aims to :  
 
 - Acquire better pronunciation of words.
 - Improve children’s capacity of assimilation.
@@ -14,7 +14,7 @@ Our solution : SpeaKid
 -----------------------
 In the face of the lack of attention of the parents towards this kind of phenomena and the expensiveness of a visit to a speech therapist, SpeaKid comes to the rescue by helping to solve these problems through increasing parents’ awareness, helping kids practicing speaking and pronouncing, repeating letters, words, sentences and sounds, and by improving their communication skills and consequently getting them to build their self-esteem and confidence without spending a cent.  
 
-This application also connects doctors with their patients through the SpeaKid website.
+This application also connects doctors with their patients through the [SpeaKid website](https://github.com/DSC-ENSB/Speakid-web).
 
 Technologies used
 ------------------
@@ -24,12 +24,17 @@ SpeaKid is a cross platform and it required the following technologies :
 - **Machine Learning** for the classification of algorithms to product and to classify the child’s disorder based on the mom’s answers.
 - **React** to build a client side web application linked with Firebase.  
 
+Code instructions
+------------------
+To run the code, click [here](https://github.com/DSC-ENSB/Speakid/blob/main/install.md).
+
 Possible next features
 ----------------------
 The features we can add to this application could be :  
 - Different languages so it could become more universal.  
 - Add facial detection.  
-- The ability to add familiar voices.
+- The ability to add familiar voices.  
+- VR/AR games.
 - The availability for teenagers and young people.  
 
 License
