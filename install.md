@@ -1,6 +1,8 @@
 # How to install 
 ___
 ##### Clone speakid repository 
+**Open terminal**
+
 `git clone git@github.com:DSC-ENSB/Speakid.git` 
 ##### Open Speakid Directory
 `cd Speakid`
