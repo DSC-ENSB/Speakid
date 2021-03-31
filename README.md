@@ -8,7 +8,9 @@ SpeaKid is a cross platform developed for kids aged between 3 and 17 years old s
 
 What is the problem ?
 ---------------------
-This disorder is more common for children aged between 3 and 10 years old and 1 of 12 children are facing it. Its impact does not disappear after their childhood, it actually follows them for the rest of their lives.   
+Speech delay is a problem that causes a lot of troubles to kids during a critical period of their lives that may influence their development and their ability to integrate into society, moreover, once they get into school, the situation if not handled correctly could become more problematic and it will develop into an obstacle for them to have access to a quality, safe and inclusive education.
+This is not only about a quality education, if we dive deep we will find a health dimension as well, because of the psychological effects a child could suffer from due to his inability to communicate fluently and at the same level as his peers.
+This disorder is more common for children aged between 3 and 10 years old and 1 of 12 children are facing it. The impact does not disappear after their childhood, it actually follows them for the rest of their lives.   
 
 Our solution : SpeaKid
 -----------------------
