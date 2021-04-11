@@ -1,4 +1,11 @@
-age	sexe	Sib	SibNum	SibSexe	Pos	Twins	Sib_Lang_Prob	Parents_Lang_Prob	Problem	Violance	Agressive	Autism	MomChronicD	Disease	NormalPrgnancy	MomRH	EarlyBirth	Birth	WeightProb	NormalBreathe	NormalScream	NormalColor	IntensiveCare	Frenulum	TonguePro	Surgery	Snoring	HearingProb	VisionProb	PSY	MuscleCramps	Fever	NormalDev	Vaccin	Prononciation	Rep	Introvert	Stubborn	EnjoyPlay	Hyperactive	FocusProb	LostInImagination	TV	Tvtime	Electronics	Etime
-5	F	Y	2	F	L	N	N	N		N	N	Y	N		Y	N	N	Normal	N	Y	Y	Y	N	N	N	N	Y	N	N	N	N	Y	N 	Y	Y	N	N	Y	Y	Y	Y	Y	Y	2	Y	2
-0	M	N	0	T	M	Y	Y	Y	N	Y	Y	N	Y	T	N 	Y	Y	C	Y	N 	N 	N 	Y 	Y 	Y 	Y 	N 	Y 	Y 	Y 	Y 	N	Y	N	N	Y	Y	N	N	N	N	N	N	0	N	0
-0	M	N	0	B	B	Y	Y	Y	Y	Y	Y	N	Y	G																																
+age	sexe	Sib	SibNum	SibSexe	Pos	Twins	Sib_Lang_Prob	Parents_Lang_Prob	Problem	Violance	Agressive	Autism	MomChronicD	Disease	NormalPrgnancy	MomRH	EarlyBirth	Birth	WeightProb	NormalBreathe	NormalScream	NormalColor	IntensiveCare	Frenulum	TonguePro	Surgery	Snoring	HearingProb	VisionProb	PSY	MuscleCramps	Fever	NormalDev	Vaccin	Prononciation	Rep	Introvert	Stubborn	EnjoyPlay	Hyperactive	FocusProb	LostInImagination	TV	Tvtime	Electronics	Etime Target
+5	F	Y	2	F	L	N	N	N		N	N	Y	N		Y	N	N	Normal	N	Y	Y	Y	N	N	N	N	Y	N	N	N	N	Y	N 	Y	Y	N	N	Y	Y	Y	Y	Y	Y	2	Y	2 PD
+4	M	N	0	M	M	Y	Y	Y	N	Y	Y	N	Y	T	N 	Y	Y	C	Y	N 	N 	N 	Y 	Y 	Y 	Y 	N 	Y 	Y 	Y 	Y 	N	Y	N	N	Y	Y	N	N	N	N	N	N	0	N	0 S
+5	F	Y	4	F	L	N	N	N	0 N	N	Y	Y	D Y N N Normal N Y Y Y N N N N Y N N N N Y N Y Y N N Y Y Y Y Y Y Y 2 Y 2 SD																																
+3 M N 0 0 0 N N N 0 N N Y N 0 Y N N Normal N Y Y Y N N N N N N N N N Y N Y Y N N N Y Y Y Y Y Y Y 2 Y 2 NLD
+4 F Y 1 F B N N Y SD N N Y N 0 Y N N Cesarean N Y Y Y N N N N Y N N N N Y N Y Y N N Y Y Y Y Y Y 4 N SD
+5 M Y 5 B M N N N 0 N N Y N 0 Y N N Normal N Y Y Y N N N N Y N N N N Y N Y Y N N Y Y Y Y Y Y 6 N ADS
+4 F Y 1 F B N N N 0 Y Y Y N 0 Y N N Normal N Y Y Y N Y Y Y N N N N N Y N Y Y N N Y Y Y Y Y Y 4 Y 1 AD
+5 F N 0 0 0 N N N 0 N N N N 0 Y N N Normal N Y Y Y N N N N Y N N N N Y N Y Y N N Y Y Y Y Y Y 3 Y 1 D
+5 M Y 2 M M N N N 0 N N Y N 0 Y N N Normal N Y Y Y N N N N N N N N N Y N Y Y N N Y Y Y Y Y Y 3 Y 2 SD
+4 F Y 3 F L N N N 0 N N Y N 0 Y N N Cesarean N Y Y Y Y N N N N N N N N Y N Y Y N N Y Y Y Y Y Y 6 Y 2 AD
